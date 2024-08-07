@@ -1,11 +1,12 @@
 import React from "react";
-import { Wrapper, Container } from "@/components";
+import { Wrapper, Icons, Container } from "@/components";
 import Image from "next/image";
-import { ArrowRight, ChevronRight, UserIcon, Zap } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BorderBeam } from "@/components/ui/border-beam";
 import SectionBadge from "@/components/ui/section-badge";
+import { features } from "@/constants";
 
 const HomePage = () => {
     return (
@@ -49,7 +50,7 @@ const HomePage = () => {
                             <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 -translate-y-1/2 h-3/4 inset-0 blur-[1rem]"></div>
                             <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
                                 <Image
-                                    src="/assets/dashboard.svg"
+                                    src="/assets/ddash.png"
                                     alt="banner image"
                                     width={1200}
                                     height={1200}
@@ -63,15 +64,77 @@ const HomePage = () => {
                     </div>
                 </Container>
             </Wrapper>
-
             {/*How it works*/}
             <Wrapper className="flex flex-col items-center justify-center py-12">
                 <Container>
-                    <div className="max-w-md mx-auto text-auto text-start md:text-center">
+                    <div className="max-w-md md:mx-auto text-auto text-start md:text-center">
                         <SectionBadge title="How it works" />
-                            <h2 className="text-muted-foreground mt-6">
-                                
+                            <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                             For Coffee Farmers
                             </h2>
+                            <p className="text-muted-foreground mt-6"> 
+                            </p>        
+                    </div>
+                </Container>
+                <Container>
+                    <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                            {features.map((feature) => (
+                                <div className="flex flex-col items-start px-0">
+                                    <div className="flex items-center justify-center">
+                                        <feature.icon className="w-8 h-8"/>
+                                    </div>
+                                    <h3 className="text-xl font-medium mt-4">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-muted-foreground mt-2 text-start">
+                                        {feature.info}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Container>
+                <Container>
+                    <div className="max-w-md mx-auto text-auto text-start md:text-center">
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                             For Clients
+                        </h2>
+                        <p className="text-muted-foreground mt-6"> 
+                        </p>        
+                    </div>
+                </Container>
+                <Container>
+                    <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                            {features.map((feature) => (
+                                <div className="flex flex-col items-start px-0">
+                                    <div className="flex items-center justify-center">
+                                        <feature.icon className="w-8 h-8"/>
+                                    </div>
+                                    <h3 className="text-xl font-medium mt-4">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-muted-foreground mt-2 text-start">
+                                        {feature.info}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+            {/*Pricing*/}
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <Container>
+                    <div className="max-w-md mx-auto text-start md:text-center">
+                        <SectionBadge title="Pricing" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Choose the right plan for your business
+                        </h2>
+                        <p className="text-muted-foreground mt-6">
+                            Choose the right plan for your business based on your needs.
+                        </p>
                     </div>
                 </Container>
             </Wrapper>
