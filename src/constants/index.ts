@@ -143,3 +143,31 @@ export const reviews = [
         body: "I'm at a loss for words. This is amazing. I love it.",
     },
 ];
+export const socials = [
+    {
+        name: "Twitter",
+        icon: Icons.twitter,
+        url: "https://twitter.com/",
+    },
+    {
+        name: "GitHub",
+        icon: Icons.github,
+        url: "https://github.com/",
+    },
+    {
+        name: "Dribbble",
+        icon: Icons.dribbble,
+        url: "https://dribbble.com/",
+    },
+    {
+        name: "Instagram",
+        icon: Icons.instagram,
+        url: "https://instagram.com/",          
+    },
+];
+
+export const firstRow = [
+    {
+        
+    }
+]

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Icons from '../global/icons';
 import { buttonVariants } from '../ui/button';
+import Image from 'next/image';
 
 const Navbar = () => {
   
@@ -13,7 +14,13 @@ const Navbar = () => {
       <div className='flex items-center justify-between h-full mx-auto md:max-w-screen-xl'>
         <div className='flex items-start'>
           <Link href='/' className='flex items-center gap-2'>
-          <Icons.logo className='w-8 h-48'/>
+          <Image
+    src="/icons/logo.png"
+    alt="banner image"
+    width={40}  
+    height={40}  
+    quality={100} 
+/>
           <span className='text-lg font-medium'>Tracecafé</span>
           </Link>
         </div>
@@ -32,6 +39,11 @@ const Navbar = () => {
           <li className='hover:text-foreground/80 text-sm'>
           <Link href="#">
               Features
+          </Link>
+          </li>
+          <li className='hover:text-foreground/80 text-sm'>
+          <Link href="#">
+              Profiles
           </Link>
           </li>
           <li className='hover:text-foreground/80 text-sm'>
